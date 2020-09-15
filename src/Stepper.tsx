@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ['Form 1 out of 3', 'Form 2 out of 3', 'Form 3 out of 3'];
+  return ['Personal Info', 'Payment Method', 'Signup'];
 }
 
 function getStepContent(stepIndex:number,handleNext: () => void) {
@@ -35,7 +35,7 @@ function getStepContent(stepIndex:number,handleNext: () => void) {
     case 2:
       return <Signup handleNext={handleNext}/>;
     default:
-      return 'Unknown stepIndex';
+      return 'Error';
   }
 }
 
